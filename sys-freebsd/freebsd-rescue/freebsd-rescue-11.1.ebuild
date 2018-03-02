@@ -9,7 +9,7 @@ DESCRIPTION="FreeBSD's rescue binaries"
 SLOT="0"
 LICENSE="BSD zfs? ( CDDL )"
 
-IUSE="atm netware nis zfs"
+IUSE="atm libressl netware nis zfs"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~x86-fbsd"
@@ -36,12 +36,13 @@ DEPEND="sys-devel/flex
 	app-arch/bzip2[static-libs]
 	dev-libs/libedit[static-libs]
 	dev-libs/libxml2:2[static-libs]
-	dev-libs/openssl:0=[static-libs]
 	sys-libs/zlib[static-libs]
 	sys-libs/readline[static-libs]
 	=sys-freebsd/freebsd-lib-${RV}*[atm?,netware?]
 	=sys-freebsd/freebsd-sources-${RV}*
 	=sys-freebsd/freebsd-mk-defs-${RV}*
+	!libressl? ( dev-libs/openssl:0= )
+	libressl? ( dev-libs/libressl:0= )
 	zfs? ( =sys-freebsd/freebsd-cddl-${RV}* )"
 
 S="${WORKDIR}/rescue"
