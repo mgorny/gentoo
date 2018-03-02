@@ -7,7 +7,7 @@ inherit bsdmk freebsd flag-o-matic pam multilib multibuild multilib-build
 
 DESCRIPTION="FreeBSD's base system source for /usr/bin"
 SLOT="0"
-IUSE="ar atm audit bluetooth ipv6 kerberos netware nis ssl usb build zfs"
+IUSE="ar atm audit bluetooth ipv6 kerberos libressl netware nis ssl usb build zfs"
 LICENSE="BSD zfs? ( CDDL )"
 
 # Security Advisory and Errata patches.
@@ -29,7 +29,10 @@ EXTRACTONLY="
 "
 
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[usb?,bluetooth?,${MULTILIB_USEDEP}]
-	ssl? ( dev-libs/openssl:0= )
+	ssl? (
+		!libressl? ( dev-libs/openssl:0= )
+		libressl? ( dev-libs/libressl:0= )
+	)
 	kerberos? ( virtual/krb5 )
 	ar? ( >=app-arch/libarchive-3 )
 	virtual/pam
