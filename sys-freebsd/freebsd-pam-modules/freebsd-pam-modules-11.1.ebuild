@@ -8,7 +8,7 @@ inherit bsdmk freebsd multilib pam
 DESCRIPTION="FreeBSD's PAM authentication modules"
 SLOT="0"
 
-IUSE="kerberos nis"
+IUSE="kerberos libressl nis"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~x86-fbsd"
@@ -17,7 +17,9 @@ fi
 EXTRACTONLY="lib/"
 
 RDEPEND=">=sys-auth/openpam-20050201-r1
-	kerberos? ( dev-libs/openssl:0=
+	kerberos? (
+		!libressl? ( dev-libs/openssl:0= )
+		libressl? ( dev-libs/libressl:0= )
 		virtual/krb5 )"
 DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-mk-defs-${RV}*
