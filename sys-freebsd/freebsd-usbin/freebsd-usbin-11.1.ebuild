@@ -30,7 +30,10 @@ EXTRACTONLY="
 
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[usb?,bluetooth?,netware?]
 	build? ( sys-apps/baselayout )
-	ssl? ( dev-libs/openssl:0 )
+	ssl? (
+		!libressl? ( dev-libs/openssl:0= )
+		libressl? ( dev-libs/libressl:0= )
+	)
 	>=app-arch/libarchive-3
 	sys-apps/tcp-wrappers
 	dev-util/dialog
@@ -47,7 +50,8 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/usr.sbin"
 
-IUSE="acpi atm audit bluetooth floppy ipv6 kerberos minimal netware nis pam ssl usb build zfs"
+IUSE="acpi atm audit bluetooth floppy ipv6 kerberos libressl minimal
+	netware nis pam ssl usb build zfs"
 
 pkg_setup() {
 	# Add the required source files.
