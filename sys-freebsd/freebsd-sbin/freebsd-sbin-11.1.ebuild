@@ -25,7 +25,10 @@ EXTRACTONLY="
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[ipv6?,atm?,netware?]
 	zfs? ( =sys-freebsd/freebsd-cddl-${RV}* )
 	>=dev-libs/expat-2.0.1
-	ssl? ( dev-libs/openssl:0= )
+	ssl? (
+		!libressl? ( dev-libs/openssl:0= )
+		libressl? ( dev-libs/libressl:0= )
+	)
 	>=dev-libs/libedit-20120311.3.0-r1
 	sys-libs/readline:0=
 	|| (
@@ -39,7 +42,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/sbin"
 
-IUSE="atm ipfilter +pf ipv6 build ssl +cxx netware zfs"
+IUSE="atm ipfilter +pf ipv6 build libressl ssl +cxx netware zfs"
 
 pkg_setup() {
 	# Add the required source files.
