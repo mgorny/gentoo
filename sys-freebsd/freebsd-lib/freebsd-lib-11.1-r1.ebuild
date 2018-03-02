@@ -35,7 +35,11 @@ EXTRACTONLY="
 "
 
 if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
-	RDEPEND="ssl? ( dev-libs/openssl:0= )
+	RDEPEND="
+		ssl? (
+			!libressl? ( dev-libs/openssl:0= )
+			libressl? ( dev-libs/libressl:0= )
+		)
 		hesiod? ( net-dns/hesiod )
 		kerberos? ( app-crypt/heimdal )
 		pam? ( virtual/pam )
@@ -71,7 +75,7 @@ if [ "${CTARGET}" = "${CHOST}" -a "${CATEGORY#*cross-}" != "${CATEGORY}" ]; then
 	export CTARGET=${CATEGORY/cross-}
 fi
 
-IUSE="atm bluetooth ssl hesiod ipv6 kerberos usb netware
+IUSE="atm bluetooth libressl ssl hesiod ipv6 kerberos usb netware
 	build headers-only zfs pam xinetd
 	userland_GNU userland_BSD"
 
