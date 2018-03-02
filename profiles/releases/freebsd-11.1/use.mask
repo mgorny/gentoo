@@ -8,7 +8,3 @@ systemtap
 # Brian Evans <grknight@gentoo.org> (15 Jan 2018)
 # Mask dev-libs/jemalloc is untested
 jemalloc
-
-# Brian Evans <grknight@gentoo.org> (15 Jan 2018)
-# Mask dev-libs/libressl is untested
-libressl

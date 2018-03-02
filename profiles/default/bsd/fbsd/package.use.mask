@@ -5,29 +5,19 @@
 # php incorrectly looks for libacl when it is built-in on FreeBSD
 dev-lang/php acl
 
-# Thomas Deutschmann <whissi@gentoo.org> (26 Oct 2017)
-# libressl: dev-libs/libressl is a base package on FreeBSD
-net-misc/wget libressl
-
-# Thomas Deutschmann <whissi@gentoo.org> (20 Jan 2017)
-# libressl: dev-libs/libressl is a base package on FreeBSD
-net-libs/libvncserver libressl
-
 # Felix Janda <felix.janda@posteo.de> (24 Sep 2016)
 # net-libs/libnetfilter_conntrack is not keyworded on FreeBSD
 net-dns/dnsmasq conntrack
 
 # Thomas Deutschmann <whissi@gentoo.org> (26 Aug 2016)
-# libressl:  dev-libs/libressl is a base package on FreeBSD
 # jemalloc:  dev-libs/jemalloc is not keyworded on FreeBSD
 # systemtap: dev-util/systemtap is not keyworded on FreeBSD and is also
 #            a linux specialized tool
-dev-db/percona-server jemalloc libressl systemtap
+dev-db/percona-server jemalloc systemtap
 
 # Thomas Deutschmann <whissi@gentoo.org> (23 Aug 2016)
-# libressl: dev-libs/libressl is a base package on FreeBSD
 # luajit:   dev-lang/luajit not keyworded on FreeBSD
-www-servers/nginx libressl luajit
+www-servers/nginx luajit
 
 # As per UberLord's requests
 sys-apps/openrc pam
