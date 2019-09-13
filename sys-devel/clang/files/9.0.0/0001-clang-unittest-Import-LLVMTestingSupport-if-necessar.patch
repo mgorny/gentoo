@@ -14,10 +14,10 @@ llvm-svn: 371733
  clang/unittests/CMakeLists.txt | 9 +++++++++
  1 file changed, 9 insertions(+)
 
-diff --git a/clang/unittests/CMakeLists.txt b/clang/unittests/CMakeLists.txt
+diff --git a/unittests/CMakeLists.txt b/unittests/CMakeLists.txt
 index 9a41000cf43..4c222e24599 100644
---- a/clang/unittests/CMakeLists.txt
-+++ b/clang/unittests/CMakeLists.txt
+--- a/unittests/CMakeLists.txt
++++ b/unittests/CMakeLists.txt
 @@ -1,6 +1,15 @@
  add_custom_target(ClangUnitTests)
  set_target_properties(ClangUnitTests PROPERTIES FOLDER "Clang tests")
