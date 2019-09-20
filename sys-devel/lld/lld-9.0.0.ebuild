@@ -28,6 +28,8 @@ RDEPEND="~sys-devel/llvm-${PV}"
 DEPEND="${RDEPEND}"
 BDEPEND="test? ( $(python_gen_any_dep "~dev-python/lit-${PV}[\${PYTHON_USEDEP}]") )"
 
+S=${WORKDIR}/${MY_P}
+
 # least intrusive of all
 CMAKE_BUILD_TYPE=RelWithDebInfo
 
