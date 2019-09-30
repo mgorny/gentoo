@@ -9,7 +9,7 @@ VERSION="1282" # every bump, new version
 
 DESCRIPTION="VDR Plugin: Osd-Teletext displays the teletext on the OSD"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-osdteletext"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
