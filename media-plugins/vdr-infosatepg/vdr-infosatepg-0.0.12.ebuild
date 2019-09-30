@@ -9,7 +9,7 @@ VERSION="1098" # every bump, new version!
 
 DESCRIPTION="VDR Plugin: Reads the contents of infosat and writes the data into the EPG"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-infosatepg"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
