@@ -11,7 +11,7 @@ RESTRICT="strip"
 
 DESCRIPTION="Addon needed for XXV - WWW Admin for the Video Disk Recorder"
 HOMEPAGE="https://projects.vdr-developer.org/projects/xxv"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz
 		mirror://gentoo/${P}.tgz"
 
 LICENSE="GPL-2"
