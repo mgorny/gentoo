@@ -9,7 +9,7 @@ VERSION="502" # every bump, new version
 
 DESCRIPTION="VDR Plugin: support output on Graphical LCD "
 HOMEPAGE="https://projects.vdr-developer.org/projects/graphlcd"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
 
 KEYWORDS="~amd64 ~x86"
 
