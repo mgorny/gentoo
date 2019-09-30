@@ -11,7 +11,7 @@ MY_P=${PN}-$(replace_version_separator 3 -jw ${PV})
 
 DESCRIPTION="VDR plugin: use LCD device for additional output"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-lcdproc"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${MY_P}.tgz -> ${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${MY_P}.tgz -> ${P}.tgz"
 
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
