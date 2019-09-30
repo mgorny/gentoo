@@ -9,7 +9,7 @@ VERSION="1252" # every bump, new version!
 
 DESCRIPTION="VDR Plugin: burn records on DVD"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-burn"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
 
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
