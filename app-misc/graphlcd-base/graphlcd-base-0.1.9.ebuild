@@ -9,7 +9,7 @@ VERSION="501" #every bump, new version
 
 DESCRIPTION="Graphical LCD Driver"
 HOMEPAGE="https://projects.vdr-developer.org/projects/graphlcd-base"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
 
 KEYWORDS="amd64 ~ppc x86"
 SLOT="0"
