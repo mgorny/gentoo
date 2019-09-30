@@ -9,7 +9,7 @@ VERSION="1966" #every bump, new version
 
 DESCRIPTION="VDR Plugin: Output Device for Raspberry Pi"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-rpihddevice"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
 
 KEYWORDS="~arm"
 SLOT="0"
