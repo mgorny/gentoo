@@ -9,7 +9,7 @@ VERSION="1580" # every bump, new version !
 
 DESCRIPTION="VDR Plugin: Client/Server and http streaming plugin"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-streamdev"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
