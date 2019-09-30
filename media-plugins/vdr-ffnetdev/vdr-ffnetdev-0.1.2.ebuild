@@ -9,7 +9,7 @@ VERSION="837" # every bump, new version
 
 DESCRIPTION="VDR Plugin: Output device which offers OSD via VNC and Video as raw mpeg over network"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-ffnetdev"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tar.bz2"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
