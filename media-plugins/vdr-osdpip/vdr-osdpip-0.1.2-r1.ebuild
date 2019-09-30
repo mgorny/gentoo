@@ -9,7 +9,7 @@ inherit vdr-plugin-2 flag-o-matic
 
 DESCRIPTION="VDR plugin: Show another channel in the OSD"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-osdpip"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
 
 KEYWORDS="amd64 x86"
 SLOT="0"
