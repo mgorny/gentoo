@@ -9,7 +9,7 @@ VERSION="1312" # every bump, new version
 
 DESCRIPTION="VDR plugin: make osd menu configurable via config-file"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-menuorg"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tar.gz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
