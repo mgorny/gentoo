@@ -11,7 +11,7 @@ DVDARCHIVE="dvdarchive-2.3-beta.sh"
 
 DESCRIPTION="VDR Plugin: Extended recordings menu"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-extrecmenu"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz
 	mirror://gentoo/${DVDARCHIVE}.gz"
 
 LICENSE="GPL-2"
