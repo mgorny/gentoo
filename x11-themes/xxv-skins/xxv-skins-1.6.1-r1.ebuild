@@ -7,8 +7,8 @@ inherit eutils
 
 DESCRIPTION="Additional skins for XXV"
 HOMEPAGE="http://projects.vdr-developer.org/projects/xxv"
-SRC_URI="mirror://vdr-developerorg/719/${P}.tgz
-		mirror://vdr-developerorg/720/xxv-jason-${PV}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/719/${P}.tgz
+		https://projects.vdr-developer.org/attachments/download/720/xxv-jason-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
