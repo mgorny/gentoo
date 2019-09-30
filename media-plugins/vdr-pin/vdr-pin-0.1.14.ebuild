@@ -9,7 +9,7 @@ VERSION="1379" # every bump, new version
 
 DESCRIPTION="VDR plugin: enable/disable parentalrating in records"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-pin"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
 KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
