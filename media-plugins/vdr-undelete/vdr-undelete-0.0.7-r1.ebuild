@@ -9,7 +9,7 @@ VERSION="1060" # every bump, new version!
 
 DESCRIPTION="VDR Plugin: Recover deleted recordings of VDR"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-undelete"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
