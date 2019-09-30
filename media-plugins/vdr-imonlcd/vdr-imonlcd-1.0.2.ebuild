@@ -9,7 +9,7 @@ VERSION="2086" # every bump, new version
 
 DESCRIPTION="VDR Plugin: shows information about the current state of VDR on iMON LCD"
 HOMEPAGE="http://projects.vdr-developer.org/wiki/plg-imonlcd"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
