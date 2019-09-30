@@ -9,7 +9,7 @@ VERSION="1318" # every bump new version
 
 DESCRIPTION="VDR Plugin: browse fast the EPG information without being forced to switch to a channel"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-zappilot"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
 
 KEYWORDS="amd64 x86"
 SLOT="0"
