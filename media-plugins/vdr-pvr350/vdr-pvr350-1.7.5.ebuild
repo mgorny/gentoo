@@ -9,7 +9,7 @@ VERSION="1657" # every bump, new version
 
 DESCRIPTION="VDR plugin: use a PVR350 as output device"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-pvr350"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
