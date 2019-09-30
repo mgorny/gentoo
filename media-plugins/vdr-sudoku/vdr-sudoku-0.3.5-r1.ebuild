@@ -9,7 +9,7 @@ VERSION="280" # every bump, new version
 
 DESCRIPTION="VDR plugin: to generate and solve Number Place puzzles, so called Sudokus"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-sudoku"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
