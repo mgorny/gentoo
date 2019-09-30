@@ -9,7 +9,7 @@ VERSION="1437" # every bump, new Version
 
 DESCRIPTION="VDR Plugin: Shows the least recently used channels"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-zaphistory"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/zaphistory-${PV}.tar.gz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/zaphistory-${PV}.tar.gz"
 
 KEYWORDS="amd64 x86"
 SLOT="0"
