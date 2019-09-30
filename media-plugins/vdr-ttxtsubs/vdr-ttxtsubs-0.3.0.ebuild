@@ -9,7 +9,7 @@ VERSION="1281" # every bump, new version!
 
 DESCRIPTION="VDR Plugin: displaying, recording and replaying teletext based subtitles"
 HOMEPAGE="https://projects.vdr-developer.org/projects/plg-ttxtsubs"
-SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tar.gz"
+SRC_URI="https://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tar.gz"
 
 KEYWORDS="amd64 x86"
 SLOT="0"
