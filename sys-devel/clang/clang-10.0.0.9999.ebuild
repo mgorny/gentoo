@@ -181,12 +181,16 @@ get_distribution_components() {
 			# tools
 			c-index-test
 			clang
+			clang-check
+			clang-extdef-mapping
 			clang-format
 			clang-import-test
+			clang-offload-bundler
 			clang-refactor
 			clang-rename
 			clang-scan-deps
 			diagtool
+			hmaptool
 			scan-build
 			scan-view
 
