@@ -369,15 +369,15 @@ multilib_src_install() {
 
 multilib_src_install_all() {
 	python_fix_shebang "${ED}"
-#	if use static-analyzer; then
-#		python_optimize "${ED}"/usr/lib/llvm/${SLOT}/share/scan-view
-#	fi
+	if use static-analyzer; then
+		python_optimize "${ED}"/usr/lib/llvm/${SLOT}/share/scan-view
+	fi
 
 	docompress "/usr/lib/llvm/${SLOT}/share/man"
 	# match 'html' non-compression
 	use doc && docompress -x "/usr/share/doc/${PF}/tools-extra"
 	# +x for some reason; TODO: investigate
-#	use static-analyzer && fperms a-x "/usr/lib/llvm/${SLOT}/share/man/man1/scan-build.1"
+	use static-analyzer && fperms a-x "/usr/lib/llvm/${SLOT}/share/man/man1/scan-build.1"
 }
 
 pkg_postinst() {
