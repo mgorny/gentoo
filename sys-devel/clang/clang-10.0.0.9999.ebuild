@@ -162,25 +162,26 @@ get_distribution_components() {
 
 	local out=(
 		# common stuff
+		clang-cmake-exports
 		clang-headers
 		clang-resource-headers
 		libclang-headers
 
 		# libs
+		clang-cpp
 		libclang
 	)
 
 	if multilib_is_native_abi; then
 		out+=(
 			# common stuff
+			bash-autocomplete
 			libclang-python-bindings
 
 			# tools
 			c-index-test
 			clang
 			clang-apply-replacements
-			clang-cmake-exports
-			clang-cpp
 			clang-doc
 			clang-format
 			clang-import-test
