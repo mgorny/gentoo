@@ -181,21 +181,27 @@ get_distribution_components() {
 			# tools
 			c-index-test
 			clang
-			clang-apply-replacements
-			clang-doc
 			clang-format
 			clang-import-test
-			clang-include-fixer
 			clang-refactor
 			clang-rename
-			clang-reorder-fields
 			clang-scan-deps
-			clang-tidy
-			clangd
 			diagtool
-			modularize
 			scan-build
 			scan-view
+
+			# extra tools
+			clang-apply-replacements
+			clang-change-namespace
+			clang-doc
+			clang-include-fixer
+			clang-move
+			clang-query
+			clang-reorder-fields
+			clang-tidy
+			clangd
+			modularize
+			pp-trace
 		)
 
 		use doc && out+=(
