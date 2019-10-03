@@ -181,8 +181,6 @@ get_distribution_components() {
 			# tools
 			c-index-test
 			clang
-			clang-check
-			clang-extdef-mapping
 			clang-format
 			clang-import-test
 			clang-offload-bundler
@@ -191,8 +189,6 @@ get_distribution_components() {
 			clang-scan-deps
 			diagtool
 			hmaptool
-			scan-build
-			scan-view
 
 			# extra tools
 			clang-apply-replacements
@@ -214,6 +210,13 @@ get_distribution_components() {
 			docs-clang-man
 			docs-clang-tools-html
 			docs-clang-tools-man
+		)
+
+		use static-analyzer && out+=(
+			clang-check
+			clang-extdef-mapping
+			scan-build
+			scan-view
 		)
 	fi
 
