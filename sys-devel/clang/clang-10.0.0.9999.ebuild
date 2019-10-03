@@ -200,6 +200,7 @@ get_distribution_components() {
 			clang-reorder-fields
 			clang-tidy
 			clangd
+			find-all-symbols
 			modularize
 			pp-trace
 		)
