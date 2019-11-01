@@ -49,10 +49,9 @@ pkg_setup() {
 }
 
 src_unpack() {
-	local dirs=( libcxxabi )
-	use test && dirs+=( libcxx )
 	git-r3_fetch
-	git-r3_checkout '' '' '' "${dirs[@]}"
+	# we always need libcxx for the headers
+	git-r3_checkout '' '' '' libcxx{,abi}
 }
 
 multilib_src_configure() {
