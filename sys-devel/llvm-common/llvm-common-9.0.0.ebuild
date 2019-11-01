@@ -17,10 +17,6 @@ IUSE=""
 
 RDEPEND="!sys-devel/llvm:0"
 
-src_configure() { :; }
-src_compile() { :; }
-src_test() { :; }
-
 src_install() {
 	insinto /usr/share/vim/vimfiles
 	doins -r */
