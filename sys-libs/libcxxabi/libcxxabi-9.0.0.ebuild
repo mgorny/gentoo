@@ -13,7 +13,7 @@ inherit cmake-multilib llvm llvm.org multiprocessing python-any-r1
 DESCRIPTION="Low level support for a standard C++ library"
 HOMEPAGE="https://libcxxabi.llvm.org/"
 # libcxx is needed uncondtionally for the headers
-LLVM_COMPONENTS=( libcxx{,abi} )
+LLVM_COMPONENTS=( libcxx{abi,} )
 llvm.org_set_globals
 
 LICENSE="Apache-2.0-with-LLVM-exceptions || ( UoI-NCSA MIT )"
