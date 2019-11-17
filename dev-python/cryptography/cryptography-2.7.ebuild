@@ -3,7 +3,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python2_7 python3_{5,6,7} pypy{,3} )
+PYTHON_COMPAT=( python2_7 python3_{5,6,7,8} pypy{,3} )
 PYTHON_REQ_USE="threads(+)"
 
 inherit distutils-r1 flag-o-matic
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="|| ( Apache-2.0 BSD )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x64-solaris"
-IUSE="libressl idna test"
+IUSE="libressl idna"
 
 # the openssl 1.0.2l-r1 needs to be updated again :(
 # It'd theb be able to go into the || section again
@@ -51,15 +51,12 @@ DEPEND="${RDEPEND}
 		>=dev-python/hypothesis-1.11.4[${PYTHON_USEDEP}]
 		!~dev-python/hypothesis-3.79.2[${PYTHON_USEDEP}]
 		dev-python/pyasn1-modules[${PYTHON_USEDEP}]
-		>=dev-python/pytest-2.9.0[${PYTHON_USEDEP}]
 	)"
 
 DOCS=( AUTHORS.rst CONTRIBUTING.rst README.rst )
 
+distutils_enable_tests pytest
+
 python_configure_all() {
 	append-cflags $(test-flags-CC -pthread)
-}
-
-python_test() {
-	py.test -v -v -x || die "Tests fail with ${EPYTHON}"
 }
