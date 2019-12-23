@@ -23,7 +23,6 @@ RDEPEND=">=sys-libs/zlib-1.1.3:0=
 	dev-libs/expat:0=
 	bzip2? ( app-arch/bzip2:0= )
 	ncurses? ( sys-libs/ncurses:0= )
-	sqlite? ( dev-db/sqlite:3= )
 	!dev-python/pypy-exe-bin:${PV}"
 # don't enforce the dep on pypy with USE=low-memory since it's going
 # to cause either collisions or circular dep on itself
