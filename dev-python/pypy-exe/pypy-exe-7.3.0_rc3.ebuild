@@ -107,6 +107,7 @@ src_configure() {
 	fi
 
 	local args=(
+		--no-shared
 		$(usex jit -Ojit -O2)
 		$(usex sandbox --sandbox '')
 
