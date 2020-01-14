@@ -32,6 +32,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-01-XX)
+# The second part of cleanup post the dead ML project.  Those packages
+# have no reverse dependencies (except one another, in some cases).
+# Due to lack of interest, we are limiting the Gentoo ML packages
+# to those that are needed by programs packages for Gentoo.
+# Many of those packages are outdated and/or buggy.
+# Removal in 30 days.  Bug #695782.
+dev-ml/macaque
+dev-ml/ocaml-augeas
+dev-ml/ocaml-dispatch
+
 # Mikle Kolyada <zlogene@gentoo.org> (2020-0113)
 # Current versioning breaks portage logic and prevents
 # us from adding official releases made by google.
