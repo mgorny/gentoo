@@ -1,0 +1,15 @@
+diff --git a/distributed/utils_test.py b/distributed/utils_test.py
+index ab1992b5..7fed09d4 100644
+--- a/distributed/utils_test.py
++++ b/distributed/utils_test.py
+@@ -1005,10 +1005,6 @@ def popen(args, **kwargs):
+     args = list(args)
+     if sys.platform.startswith("win"):
+         args[0] = os.path.join(sys.prefix, "Scripts", args[0])
+-    else:
+-        args[0] = os.path.join(
+-            os.environ.get("DESTDIR", "") + sys.prefix, "bin", args[0]
+-        )
+     proc = subprocess.Popen(args, **kwargs)
+     try:
+         yield proc
