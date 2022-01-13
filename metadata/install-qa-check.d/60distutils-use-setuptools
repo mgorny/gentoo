@@ -1,4 +1,4 @@
-# Copyright 2020-2021 Gentoo Authors
+# Copyright 2020-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # QA check: verify correctness of DISTUTILS_USE_SETUPTOOLS
@@ -7,6 +7,8 @@
 distutils_use_setuptools_check() {
 	# applicable only to ebuilds inheriting distutils-r1
 	[[ ${_DISTUTILS_R1} ]] || return
+	# DUS is no longer meaningful in PEP517 mode
+	[[ ${DISTUTILS_USE_PEP517} ]] && return
 	# 'manual' means no checking
 	[[ ${DISTUTILS_USE_SETUPTOOLS} == manual ]] && return
 	# pyproject.toml is verified by using it
