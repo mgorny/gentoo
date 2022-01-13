@@ -95,6 +95,8 @@ esac
 #
 # - pdm - pdm.pep517 backend
 #
+# - poetry - poetry-core backend
+#
 # - setuptools - distutils or setuptools (incl. legacy mode)
 #
 # - standalone - standalone build systems without external deps
@@ -166,6 +168,10 @@ _distutils_set_globals() {
 			pdm)
 				bdep+='
 					dev-python/pdm-pep517[${PYTHON_USEDEP}]'
+				;;
+			poetry)
+				bdep+='
+					dev-python/poetry-core[${PYTHON_USEDEP}]'
 				;;
 			setuptools)
 				bdep+='
@@ -844,6 +850,9 @@ _distutils-r1_backend_to_key() {
 			;;
 		pdm.pep517.api)
 			echo pdm
+			;;
+		poetry.core.masonry.api)
+			echo poetry
 			;;
 		setuptools.build_meta|setuptools.build_meta:__legacy__)
 			echo setuptools
