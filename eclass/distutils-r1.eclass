@@ -1390,6 +1390,9 @@ distutils_pep517_install() {
 			;;
 	esac
 
+	# https://pyo3.rs/latest/building-and-distribution.html#cross-compiling
+	tc-is-cross-compiler && local -x PYO3_CROSS_LIB_DIR=${SYSROOT}/$(python_get_stdlib)
+
 	local build_backend=$(_distutils-r1_get_backend)
 	einfo "  Building the wheel for ${PWD#${WORKDIR}/} via ${build_backend}"
 	cmd+=(
