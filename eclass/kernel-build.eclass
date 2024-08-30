@@ -243,7 +243,13 @@ kernel-build_src_configure() {
 		MAKEARGS+=( KBZIP2="lbzip2" )
 	fi
 
-	[[ -f .config ]] || die "Ebuild error: please copy default config into .config"
+	if [[ ! -f .config ]]; then
+		if use savedconfig; then
+			> .config || die
+		else
+			die "Ebuild error: please copy default config into .config"
+		fi
+	fi
 
 	if [[ -z "${KV_LOCALVERSION}" ]]; then
 		KV_LOCALVERSION=$(sed -n -e 's#^CONFIG_LOCALVERSION="\(.*\)"$#\1#p' \
