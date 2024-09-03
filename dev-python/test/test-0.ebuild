@@ -19,6 +19,18 @@ RDEPEND="
 	${PYTHON_DEPS}
 	$(python_gen_cond_dep '
 		|| (
+			dev-python/python-tests:3.10
+			<dev-lang/python-3.10.14_p3-r1:3.10
+		)
+	' python3_10)
+	$(python_gen_cond_dep '
+		|| (
+			dev-python/python-tests:3.11
+			<dev-lang/python-3.11.9_p2-r1:3.11
+		)
+	' python3_11)
+	$(python_gen_cond_dep '
+		|| (
 			dev-python/python-tests:3.12
 			<dev-lang/python-3.12.5_p1-r1:3.12
 		)
