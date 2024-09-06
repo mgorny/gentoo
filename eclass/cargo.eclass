@@ -589,6 +589,9 @@ cargo_env() {
 	[[ ${#LD_A[@]} -gt 1 ]] && local CARGO_TARGET_"${TRIPLE}"_RUSTFLAGS+="$(printf -- ' -C link-arg=%s' "${LD_A[@]:1}")"
 	local CARGO_TARGET_"${TRIPLE}"_RUSTFLAGS+=" ${RUSTFLAGS}"
 
+	# force verbose C/C++ compilation output from cc crate
+	local -x CC_ENABLE_DEBUG_OUTPUT=1
+
 	(
 		# These variables will override the above, even if empty, so unset them
 		# locally. Do this in a subshell so that they remain set afterwards.
