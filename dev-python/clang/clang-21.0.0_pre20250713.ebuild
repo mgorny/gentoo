@@ -33,7 +33,7 @@ BDEPEND="
 	)
 "
 
-LLVM_COMPONENTS=( clang )
+LLVM_COMPONENTS=( clang/bindings/python )
 llvm.org_set_globals
 
 python_test() {
