@@ -33,7 +33,7 @@ BDEPEND="
 	)
 "
 
-LLVM_COMPONENTS=( clang )
+LLVM_COMPONENTS=( clang .github )
 LLVM_PATCHSET=${PV/_/-}
 llvm.org_set_globals
 
