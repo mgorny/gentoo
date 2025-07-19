@@ -33,7 +33,7 @@ BDEPEND="
 	)
 "
 
-LLVM_COMPONENTS=( clang .github )
+LLVM_COMPONENTS=( clang/bindings/python clang .github )
 LLVM_PATCHSET=${PV/_/-}
 llvm.org_set_globals
 
