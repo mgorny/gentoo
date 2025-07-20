@@ -34,7 +34,7 @@ BDEPEND="
 "
 
 LLVM_COMPONENTS=( clang/bindings/python clang .github )
-LLVM_PATCHSET=${PV/_/-}
+LLVM_PATCHSET=${PV/_/-}-r1
 llvm.org_set_globals
 
 python_test() {
