@@ -23,7 +23,7 @@ BDEPEND="
 "
 
 LLVM_COMPONENTS=( libclc )
-LLVM_PATCHSET=${PV/_/-}
+LLVM_PATCHSET=${PV/_/-}-r1
 llvm.org_set_globals
 
 pkg_setup() {
