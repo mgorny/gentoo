@@ -53,7 +53,7 @@ BDEPEND="
 "
 
 LLVM_COMPONENTS=( compiler-rt cmake llvm/cmake )
-LLVM_PATCHSET=${PV/_/-}
+LLVM_PATCHSET=${PV/_/-}-r1
 LLVM_TEST_COMPONENTS=(
 	llvm/include/llvm/ProfileData llvm/lib/Testing/Support third-party
 )
