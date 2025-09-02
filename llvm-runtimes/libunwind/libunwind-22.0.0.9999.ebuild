@@ -47,7 +47,7 @@ python_check_deps() {
 
 test_compiler() {
 	target_is_not_host && return
-	local compiler="$1"
+	local compiler=${1}
 	shift
 	${compiler} ${CFLAGS} ${LDFLAGS} "${@}" -o /dev/null -x c - \
 		<<<'int main() { return 0; }' &>/dev/null
@@ -87,12 +87,12 @@ multilib_src_configure() {
 	fi
 
 	# Check whether C compiler runtime is available.
-	if ! test_compiler $(tc-getCC); then
+	if ! test_compiler "$(tc-getCC)"; then
 		local nolib_flags=( -nodefaultlibs -lc )
-		if test_compiler $(tc-getCC) "${nolib_flags[@]}"; then
+		if test_compiler "$(tc-getCC)" "${nolib_flags[@]}"; then
 			local -x LDFLAGS="${LDFLAGS} ${nolib_flags[*]}"
 			ewarn "${CC} seems to lack runtime, trying with ${nolib_flags[*]}"
-		elif test_compiler $(tc-getCC) "${nolib_flags[@]}" -nostartfiles; then
+		elif test_compiler "$(tc-getCC)" "${nolib_flags[@]}" -nostartfiles; then
 			# Avoiding -nostartfiles earlier on for bug #862540,
 			# and set available entry symbol for bug #862798.
 			nolib_flags+=( -nostartfiles -e main )
@@ -102,8 +102,9 @@ multilib_src_configure() {
 	fi
 	# Check whether C++ standard library is available,
 	local nostdlib_flags=( -nostdlib++ )
-	if ! test_compiler $(tc-getCXX) && \
-			test_compiler $(tc-getCXX) "${nostdlib_flags[@]}"; then
+	if ! test_compiler "$(tc-getCXX)" &&
+		test_compiler "$(tc-getCXX)" "${nostdlib_flags[@]}"
+	then
 		local -x LDFLAGS="${LDFLAGS} ${nostdlib_flags[*]}"
 		ewarn "${CXX} seems to lack runtime, trying with ${nostdlib_flags[*]}"
 	fi
