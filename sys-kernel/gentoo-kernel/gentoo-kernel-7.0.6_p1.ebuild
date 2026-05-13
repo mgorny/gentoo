@@ -9,7 +9,7 @@ inherit kernel-build toolchain-funcs verify-sig
 
 BASE_P=linux-${PV%.*}
 PATCH_PV=${PV%_p*}
-PATCHSET=linux-gentoo-patches-7.0.6_p1
+PATCHSET=linux-gentoo-patches-${PV}
 # https://koji.fedoraproject.org/koji/packageinfo?packageID=8
 # forked to https://github.com/projg2/fedora-kernel-config-for-gentoo
 CONFIG_VER=7.0.1-gentoo
