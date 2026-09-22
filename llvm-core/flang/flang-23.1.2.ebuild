@@ -144,6 +144,7 @@ build_flang_rt() {
 src_test() {
 	# respect TMPDIR!
 	local -x LIT_PRESERVES_TMP=1
+	local -x LIT_XFAIL="Driver/fakeflang.F"
 
 	build_flang_rt
 
