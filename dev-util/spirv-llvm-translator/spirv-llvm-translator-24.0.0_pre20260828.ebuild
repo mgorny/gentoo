@@ -4,7 +4,7 @@
 EAPI=8
 
 # spirv-headers-tag.conf
-HASH_SPIRV="575b6512579ebde466ed3dfc04e413439d14d95d"
+HASH_SPIRV="cb42dec3830d3ac67fa449ecdc0c0f73d5e74498"
 MY_PN="SPIRV-LLVM-Translator"
 EGIT_COMMIT=4a19bdafebf0898a3b4d9d17e10c72b92da76e74
 MY_P=${MY_PN}-${EGIT_COMMIT}
